@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyShow - Movie Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Navbar styling */
+      .navbar {
+        background-color: #000;
+      }
+      .navbar-brand {
+        color: #f84464 !important;
+        font-weight: bold;
+      }
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #f84464 !important;
+      }
+      .navbar-toggler-icon {
+        filter: invert(100%);
+      }
+
+      /* Search bar */
+      form input[type="search"] {
+        border-radius: 25px;
+        padding: 0.6rem 1rem;
+        border: none;
+      }
+      form button {
+        border-radius: 25px;
+      }
+
+      /* Movie details section */
+      #movieDetails {
+        color: #333;
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        border-radius: 10px;
+      }
+      #movieDetails h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      #movieDetails h4 {
+        font-size: 1.3rem;
+        color: #6c757d;
+      }
+      #movieDetails img {
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      /* Book tickets table */
+      table {
+        margin-top: 2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      table th {
+        background-color: #343a40;
+        color: #000000;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+      }
+      table td {
+        text-align: center;
+        vertical-align: middle;
+      }
+      table .btn-danger {
+        background-color: #ff002f;
+        border: none;
+      }
+      table .btn-danger:hover {
+        background-color: #e60029;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #222;
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      footer h6 {
+        color: #ff002f;
+        font-weight: bold;
+      }
+      footer a {
+        color: #bbb;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: #ff002f;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+    class="navbar navbar-expand-lg navbar-dark"
+    style="background-color: #000000"
+  >
+    <div class="container">
+      <a
+        class="navbar-brand"
+        href="#"
+        >bookMyshow</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      
+        <form class="d-flex mx-5" style="width: 80%;">
+          <input
+            type="search"
+            class="form-control me-2"
+            
+            placeholder="Search for Movies, Events, Plays"
+          />
+          <button class="btn btn-outline-light" type="submit" style="border-radius: 50px;">Search</button>
+        </form>
+        <div class="dropdown" style="border-radius: 25px;">
+          <a style="border-radius: 25px;" class="btn btn-outline-light dropdown-toggle p-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="border-radius: 25px;">
+            <li><a class="dropdown-item" href="#">Movies</a></li>
+            <li><a class="dropdown-item" href="#">Stream</a></li>
+            <li><a class="dropdown-item" href="#">Events</a></li>
+            <li><a class="dropdown-item" href="#">Plays</a></li>
+            <li><a class="dropdown-item" href="#">Sports</a></li>
+            <li><a class="dropdown-item" href="#">Activities</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+    <!-- Movie Details Section -->
+    <div class="container mt-4 p-5" id="movieDetails" style="background-color: #000000;">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="https://assets-in.bmscdn.com/iedb/movies/images/website/poster/large/vettaiyan-et00379391-1727938465.jpg"
+            alt="Indian 2"
+            class="img-fluid mb-4"
+            style="max-width: 100%; height: 100%; border: #f8f9fa solid 1px;"
+          />
+        </div>
+        <div class="col-md-8" style="color: #ffecec;">
+          <h1>Vettaiyan</h1>
+          <h4>Director: Shankar</h4>
+          <h4>Genre: Drama</h4>
+          <h2>About the Movie</h2>
+          <p>
+            Indian 2 is a 2024 Tamil-language action film directed by Shankar,
+            starring Kamal Haasan. The film continues the story of Senapathy, a
+            vigilante seeking justice.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Tickets Section -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Book Tickets</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Showtime</th>
+              <th>Seats Available</th>
+              <th>Book Tickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="col">
+              <td class="align-middle">
+                <strong>2024-10-12</strong>
+              </td>
+              <td>
+                <div
+                  class="border p-1"
+                  style="display: flex; flex-direction: column; align-items: center"
+                >
+                  <div>02:45 PM</div>
+                  <div class="text-muted" style="font-size: 15px">
+                    4K Dolby Atmos 7.1
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="border p-3"
+                  style="display: flex; flex-direction: column; align-items: center"
+                >
+                  <div>18</div>
+                </div>
+              </td>
+              <td>
+                <button class="btn btn-sm btn-danger p-3 d-block w-100">
+                  Book Tickets
+                </button>
+              </td>
+            </tr>
+
+
+            <tr class="col">
+                <td class="align-middle">
+                  <strong>2024-10-12</strong>
+                </td>
+                <td>
+                  <div
+                    class="border p-1"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>02:45 PM</div>
+                    <div class="text-muted" style="font-size: 15px">
+                      4K Dolby Atmos 7.1
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border p-3"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>18</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger p-3 d-block w-100">
+                    Book Tickets
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="col">
+                <td class="align-middle">
+                  <strong>2024-10-12</strong>
+                </td>
+                <td>
+                  <div
+                    class="border p-1"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>02:45 PM</div>
+                    <div class="text-muted" style="font-size: 15px">
+                      4K Dolby Atmos 7.1
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border p-3"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>18</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger p-3 d-block w-100">
+                    Book Tickets
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="col">
+                <td class="align-middle">
+                  <strong>2024-10-12</strong>
+                </td>
+                <td>
+                  <div
+                    class="border p-1"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>02:45 PM</div>
+                    <div class="text-muted" style="font-size: 15px">
+                      4K Dolby Atmos 7.1
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border p-3"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>18</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger p-3 d-block w-100">
+                    Book Tickets
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="col">
+                <td class="align-middle">
+                  <strong>2024-10-12</strong>
+                </td>
+                <td>
+                  <div
+                    class="border p-1"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>02:45 PM</div>
+                    <div class="text-muted" style="font-size: 15px">
+                      4K Dolby Atmos 7.1
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border p-3"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>18</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger p-3 d-block w-100">
+                    Book Tickets
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="col">
+                <td class="align-middle">
+                  <strong>2024-10-12</strong>
+                </td>
+                <td>
+                  <div
+                    class="border p-1"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>02:45 PM</div>
+                    <div class="text-muted" style="font-size: 15px">
+                      4K Dolby Atmos 7.1
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="border p-3"
+                    style="display: flex; flex-direction: column; align-items: center"
+                  >
+                    <div>18</div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-danger p-3 d-block w-100">
+                    Book Tickets
+                  </button>
+                </td>
+              </tr>
+            
+
+            
+            <!-- Add more showtimes as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+      <div class="container">
+        <h6>BookMyShow</h6>
+        <p>Your ultimate movie booking destination.</p>
+        <p>
+          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        </p>
+        <p>© 2024 BookMyShow. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
